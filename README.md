@@ -25,3 +25,25 @@ Ao fazer as consultas no banco, pense nos critérios a serem estabelecidos pois 
 # Melhorias
 
 Serão implementadas melhorias como as barras de progresso das tarefas de forma mais adequada, além de mais exemplo nos tipos de consulta a serem feitos bem como a adição de um arquivo chamado analitic.R onde pretendo colocar exemplos de análises dos dados disponíveis.
+
+# Tabelas geradas:
+
+Verificar a estrutura dos dados no arquivo: NOVOLAYOUTDOSDADOSABERTOSDOCNPJ.pdf
+
+As tabelas são:
+
+* empresas: dados cadastrais da empresa em nível de matriz;
+* estabelecimentos: dados analíticos da empresa por unidade / estabelecimento (telefones, endereço, filial, etc);
+* socios: dados cadastrais dos sócios das empresas;
+* simples: dados de MEI e Simples Nacional;
+* cnae: código e descrição dos CNAEs;
+* qualsocios: tabela de qualificação das pessoas físicas - sócios, responsável e representante legal;
+* natju: tabela de naturezas jurídicas - código e descrição;
+* motivos: tabela de motivos da situação cadastral - código e descrição;
+* pais: tabela de países - código e descrição;
+* municipios: tabela de municípios - código e descrição.
+
+Não há relacionamento estre as tabelas no banco de dados. Isso porque não se trata de ítem relevante no momento. No entanto, será implementado mais a diante.
+
+
+
