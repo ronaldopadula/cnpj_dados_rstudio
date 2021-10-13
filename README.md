@@ -43,7 +43,8 @@ As tabelas são:
 * pais: tabela de países - código e descrição;
 * municipios: tabela de municípios - código e descrição.
 
-Não há relacionamento estre as tabelas no banco de dados. Isso porque não se trata de ítem relevante no momento. No entanto, será implementado mais a diante.
+Não há relacionamento estre as tabelas no banco de dados. Isso porque não se trata de ítem relevante no momento. No entanto, será implementado mais a diante. No entanto o arquivo![estrutura_relacional](https://user-images.githubusercontent.com/10247763/137045347-7dd40b99-37f6-4422-b6a8-979b58ddfaeb.png)
+
 
 
 
