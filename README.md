@@ -28,7 +28,8 @@ Serão implementadas melhorias como as barras de progresso das tarefas de forma 
 
 # Tabelas geradas:
 
-Verificar a estrutura dos dados no arquivo: NOVOLAYOUTDOSDADOSABERTOSDOCNPJ.pdf
+Verificar a estrutura dos dados no arquivo: [NOVOLAYOUTDOSDADOSABERTOSDOCNPJ.pdf](https://github.com/ronaldopadula/cnpj_dados_rstudio/files/7333771/NOVOLAYOUTDOSDADOSABERTOSDOCNPJ.pdf)
+
 
 As tabelas são:
 
