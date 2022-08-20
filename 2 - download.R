@@ -12,7 +12,7 @@ inspecao <- cnpj_page %>%
   html_nodes(".external-link") %>% # nodes são as classes, neste caso foi verificada a classe "external-link".
   html_attr("href") %>% # attr são os atributos, neste casso é "href" que são urls.
   unique()
-count <- length(inspecao)
+counts <- length(inspecao)
 count
 
 class(inspecao)
@@ -22,7 +22,7 @@ inspecao
 
 for(i in 1:count){
   pb$tick()
-  Sys.sleep(1 / count_empresas)
+  Sys.sleep(1 / count)
   url_ativa <- inspecao[i]
   arquivo <- str_remove(url_ativa, "http://200.152.38.155/CNPJ/")
   salvar <- paste(dir_download,"/",arquivo, sep = "")
