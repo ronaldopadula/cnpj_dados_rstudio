@@ -9,10 +9,10 @@ length(cnpj_page)
 
 # INSPEÇÃO DOS ELEMENTOS E CRIAÇÃO DO DATAFRAME COM OS LINKS
 inspecao <- cnpj_page %>% 
-  html_nodes(".external-link") %>% # nodes são as classes, neste caso foi verificada a classe "external-link".
+  html_nodes("a") %>% # nodes são as classes, neste caso foi verificada a classe "a".
   html_attr("href") %>% # attr são os atributos, neste casso é "href" que são urls.
   unique()
-counts <- length(inspecao)
+count <- length(inspecao)
 count
 
 class(inspecao)
@@ -23,8 +23,8 @@ inspecao
 for(i in 1:count){
   pb$tick()
   Sys.sleep(1 / count)
-  url_ativa <- inspecao[i]
-  arquivo <- str_remove(url_ativa, "http://200.152.38.155/CNPJ/")
+  arquivo <- inspecao[i]
+  url_ativa <- str_c(url_cnpj, arquivo)
   salvar <- paste(dir_download,"/",arquivo, sep = "")
   download.file(url_ativa, salvar, mode="wb")
 }

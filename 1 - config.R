@@ -7,9 +7,10 @@ dir_download <- "./download"
 dir_unzip <- "./unzip"
 
 # link da página da receita federal
-url_cnpj <- "https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/cadastros/consultas/dados-publicos-cnpj"
+url_cnpj <- "http://200.152.38.155/CNPJ/"
 
 # criação da barra de progresso
 pb <- progress_bar$new(
   format = "  downloading [:bar] :percent eta: :eta",
   total = 100, clear = FALSE, width= 60)
+
