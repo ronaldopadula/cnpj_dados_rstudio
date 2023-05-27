@@ -30,7 +30,7 @@ for (i in 1:count_empresas) {
 
 ##############################################################################################################
 # Cria e carrega a tabela estabelecimentos
-lista_estabelecimentos <- list.files(path = dir_unzip, pattern = "SIMPLES", full.names = FALSE)
+lista_estabelecimentos <- list.files(path = dir_unzip, pattern = "ESTABELE", full.names = FALSE)
 count_estabelecimentos <- length(lista_estabelecimentos)
 
 for (i in 1:count_estabelecimentos) {
