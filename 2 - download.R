@@ -27,5 +27,7 @@ for(i in 1:count){
   url_ativa <- str_c(url_cnpj, arquivo)
   salvar <- paste(dir_download,"/",arquivo, sep = "")
   download.file(url_ativa, salvar, mode="wb")
+  options(timeout = 1000)
 }
+
 
