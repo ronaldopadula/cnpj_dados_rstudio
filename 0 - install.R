@@ -4,6 +4,8 @@
 
 # OBS: o SQLite deve estar instalado no seu computador
 # consultar o site do projeto: https://www.sqlite.org/
+# No Ubuntu:
+# sudo apt install libcurl4-openssl-dev
 
 # Verificar bibliotecas e instalar se precisar:
 
