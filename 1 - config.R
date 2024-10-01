@@ -7,7 +7,8 @@ dir_download <- "./download"
 dir_unzip <- "./unzip"
 
 # link da página da receita federal
-url_cnpj <- "http://200.152.38.155/CNPJ/"
+# houve mudanças. Deve-se completar com o ano e o mês no exemplo: ¨2024-9¨
+url_cnpj <- "http://200.152.38.155/CNPJ/dados_abertos_cnpj/2024-09/"
 
 # criação da barra de progresso
 pb <- progress_bar$new(
