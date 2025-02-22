@@ -1,3 +1,5 @@
+# Seguem exemplos de consultas direto na base de dados com um modelo de exportação em .csv no final.
+
 # fazer conexão com o banco de dados
 conn <- dbConnect(RSQLite::SQLite(), "cnpj.db")
 
@@ -67,13 +69,17 @@ empresas_selec <- dbGetQuery(conn,"SELECT cnpj_basico, cnae_fiscal_principal, no
 
 empresas_selec10 <- dbGetQuery(conn, "SELECT * FROM estabelecimentos LIMIT 10")
 
-estatais <- dbGetQuery(conn, "SELECT e.*,em.* 
+estatais_RJ <- dbGetQuery(conn, "SELECT e.*,em.* 
                        FROM estabelecimentos e
                        INNER JOIN empresas em ON e.cnpj_basico = em.cnpj_basico
                        INNER JOIN natju n ON em.natureza_juridica = n.codigo
                        WHERE e.uf = 'RJ'
                        AND em.natureza_juridica IN (2011, 2038)
 ")
+
+# Exportar o resultado para um arquivo CSV
+write.csv(estatais_RJ, file = "estatais_RJ.csv", row.names = FALSE, fileEncoding = "UTF-8")
+
 
 # Fechar a conexão com o banco de dados
 dbDisconnect(conn)
