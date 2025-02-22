@@ -22,4 +22,4 @@ if(length(new.packages)) install.packages(new.packages, dependencies = TRUE)
 #install.packages("DBI", dependencies = TRUE)
 #install.packages("progress", dependencies = TRUE)
 
-#Obs: cara arquivo do programa terá a chamada das bibliotecas para executar.
+#Obs: cada arquivo do programa terá a chamada das bibliotecas para executar.
