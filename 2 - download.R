@@ -2,6 +2,11 @@ library(tidyverse) # trabalhar com strings
 library(rvest) # pacote para web scraping
 library(progress) # Biblioteca para criar a barra de progresso da tarefa
 
+# criação da barra de progresso
+pb <- progress_bar$new(
+  format = "  downloading [:bar] :percent eta: :eta",
+  total = 100, clear = FALSE, width= 60)
+
 # ACESSO AO LINK E CARREGAMENTO DOS ELEMENTOS DA PÁGINA
 cnpj_page <- read_html(url_cnpj)
 print(cnpj_page)
@@ -27,7 +32,6 @@ for(i in 1:count){
   url_ativa <- str_c(url_cnpj, arquivo)
   salvar <- paste(dir_download,"/",arquivo, sep = "")
   download.file(url_ativa, salvar, mode="wb")
-  options(timeout = 1000)
+  options(timeout = 10000)
 }
-
 
