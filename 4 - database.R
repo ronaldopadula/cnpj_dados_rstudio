@@ -4,6 +4,15 @@ library(RSQLite) # Biblioteca do SQLite ( o SQLite tem que estar instalado no se
 library(DBI) # Biblioteca para conectar e manipular o banco de dados
 library(progress) # Biblioteca para criar a barra de progresso da tarefa
 
+#Configuração dos diretórios para salvar os arquivos (pastas já criadas)
+dir_download <- "./download"
+dir_unzip <- "./unzip"
+
+# criação da barra de progresso
+pb <- progress_bar$new(
+  format = "  downloading [:bar] :percent eta: :eta",
+  total = 100, clear = FALSE, width= 60)
+
 # cria automaticamente o banco "cnpj.db" se o mesmo não existir, e conecta
 conn <- dbConnect(RSQLite::SQLite(), "cnpj.db")
 
@@ -26,6 +35,7 @@ for (i in 1:count_empresas) {
                           "porte_empresa", 
                           "ente_federativo_responsavel")
   dbWriteTable(conn, name="empresas", value=empresas, append=TRUE)
+  
 }
 
 ##############################################################################################################
